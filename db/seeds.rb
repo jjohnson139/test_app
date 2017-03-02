@@ -21,3 +21,11 @@ patient = Patient.create(name: "Jonas")
 patient = Patient.create(name: "Mike")
 patient = Patient.create(name: "Sam")
 patient = Patient.create(name: "Dave")
+
+# Treatment Seed Data
+
+treatment = Treatment.create(name: "Physio")
+treatment = Treatment.create(name: "Chiro")
+treatment = Treatment.create(name: "Massage")
+treatment = Treatment.create(name: "Floating")
+treatment = Treatment.create(name: "Meditation")

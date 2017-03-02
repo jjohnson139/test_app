@@ -25,3 +25,23 @@
 <br>
 
 <%= link_to 'New Patient', new_patient_path %>
+
+<table>
+    <tr>
+        <th>Patient_id</th>
+        <th>name</th>
+     
+
+    </tr>
+    
+    <% @patients.each do |patient| %>
+    <tr>
+        <td><%= patient.id %></td>
+        <td><%= patient.name %></td>
+    </tr>
+    <% end %>
+</table>
+
+<br>
+<br>
+<br>

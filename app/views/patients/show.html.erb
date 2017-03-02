@@ -7,3 +7,23 @@
 
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>
+
+<table>
+    <tr>
+        <th>Patient_id</th>
+        <th>name</th>
+     
+
+    </tr>
+    
+    <% @patients.each do |patient| %>
+    <tr>
+        <td><%= patient.Patient_id %></td>
+        <td><%= patient.Name %></td>
+    </tr>
+    <% end %>
+</table>
+
+<br>
+<br>
+<br>

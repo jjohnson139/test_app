@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170131222240) do
+ActiveRecord::Schema.define(version: 20170227172116) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,21 +19,34 @@ ActiveRecord::Schema.define(version: 20170131222240) do
     t.integer  "physician_id"
     t.integer  "patient_id"
     t.datetime "appointment_date"
-  end
-
-  create_table "articles", force: :cascade do |t|
-    t.string   "title"
-    t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "patients", force: :cascade do |t|
-    t.string "name"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "link"
   end
 
   create_table "physicians", force: :cascade do |t|
-    t.string "name"
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "treatments", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "visits", force: :cascade do |t|
+    t.integer  "appointment_id"
+    t.integer  "treatment_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
 end

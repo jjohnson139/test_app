@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Visits</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Treatment</th>
+      <th>Physician ID</th>
+      <th>Patient Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @visits.each do |visit| %>
+
+      <tr>
+
+        <td><%= visit.treatment.name %></td>
+        <td><%= visit.appointment.physician_id %></td>
+        <td><%= visit.appointment.patient.name %></td>
+
+       
+      </tr>
+   
+    <% end %>
+    <tr>
+
+
+    </tr>
+
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Visit', new_visit_path %>
